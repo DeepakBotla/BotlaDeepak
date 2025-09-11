@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botla Deepak</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #f5f5f5; color: #333; }
+    header {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: url('image.jpeg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+    header h1 {
+      font-size: 3rem;
+      z-index: 1;
+      min-height: 3.5rem;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #4da6ff;
+      animation: typing 2.5s steps(30, end), blink-caret 0.7s step-end infinite, fadeInDown 2s ease;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #4da6ff; }
+    }
+    header p {
+      font-size: 1.2rem;
+      z-index: 1;
+      animation: fadeInUp 2s ease;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    section {
+      padding: 80px 10%;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s cubic-bezier(.77,0,.18,1);
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 0.2s;
+    }
+    .card, .skills > div, .skills .card {
+      transition: transform 0.4s cubic-bezier(.77,0,.18,1), box-shadow 0.4s;
+    }
+    .card:hover, .skills .card:hover {
+      transform: translateY(-12px) scale(1.04) rotate(-1deg);
+      box-shadow: 0 8px 32px rgba(37,99,235,0.13);
+    }
+    .skills { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 20px; }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-10px); }
+    nav {
+      width: 100%;
+      background: #222;
+      padding: 1rem 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      display: flex;
+      gap: 2rem;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      margin-right: 2rem;
+      margin-left: 0;
+      font-size: 1.25rem;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+  <a href="#">Home</a>
+  <a href="#about">About Me</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+  </nav>
+  <header style="padding-top:90px;">
+    <h1 id="main-typing">Hi, I'm <span style="color:#4da6ff;">Botla Deepak</span></h1>
+    <p class="fade-in" style="animation: fadeInUp 2s 1.2s both;">Second Year Computer Science and Information Technology Student</p>
+  </header>
+
+  <section id="about" style="padding-top:40px;">
+    <h2 style="font-size:2.7rem;font-weight:700;color:#111;text-align:center;margin-bottom:0.7rem;">About Me</h2>
+    <p style="font-size:1.25rem;color:#444;max-width:800px;margin:0 auto 2.5rem auto;text-align:center;">A passionate with a drive for innovation and problem-solving. Currently pursuing my second year in Computer Science and Information Technology while building impactful solutions.</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:2.5rem;max-width:1200px;margin:0 auto 2.5rem auto;">
+      <!-- Profile Card -->
+      <div style="background:#fff;border-radius:18px;box-shadow:0 4px 24px rgba(0,0,0,0.06);padding:2.2rem 2rem 2rem 2rem;min-width:320px;max-width:340px;flex:1;display:flex;flex-direction:column;align-items:center;">
+        <img src="Botla Deepak.png" alt="Profile" style="width:110px;height:110px;border-radius:50%;object-fit:cover;margin-bottom:1.1rem;border:4px solid #e3eafc;">
+        <div style="font-size:1.45rem;font-weight:700;margin-bottom:0.2rem;text-align:center;">Botla Deepak</div>
+        <div style="color:#2563eb;font-weight:600;font-size:1.1rem;margin-bottom:1rem;text-align:center;">Frontend  Developer</div>
+        <div style="color:#555;font-size:1rem;margin-bottom:1.2rem;text-align:center;">B.Tech Computer Science and Information Technology • KL University</div>
+        <ul style="list-style:none;padding:0;margin:0;width:100%;">
+          <li style="display:flex;align-items:center;gap:0.7rem;color:#2563eb;font-size:1rem;margin-bottom:0.7rem;"><span>&#128205;</span> Nizamabad,Telangana</li>
+          <li style="display:flex;align-items:center;gap:0.7rem;color:#2563eb;font-size:1rem;margin-bottom:0.7rem;"><span>&#128197;</span> 18 years old</li>
+          <li style="display:flex;align-items:center;gap:0.7rem;color:#2563eb;font-size:1rem;margin-bottom:0.7rem;"><span>&#127760;</span> English, Hindi, Telugu</li>
+          <li style="display:flex;align-items:center;gap:0.7rem;color:#2563eb;font-size:1rem;margin-bottom:0.7rem;"><span>&#128188;</span> Student & Freelancer</li>
+    
+        </ul>
+      </div>
+      <!-- Journey Card -->
+      <div style="background:#fff;border-radius:18px;box-shadow:0 4px 24px rgba(0,0,0,0.06);padding:2.2rem 2rem 2rem 2rem;flex:2;min-width:340px;max-width:600px;">
+        <div style="font-size:1.45rem;font-weight:700;margin-bottom:1.1rem;">My Journey</div>
+        <div style="color:#444;font-size:1.13rem;line-height:1.7;">
+          I’m a second-year Computer Science and Infromation student with a passion for front-end development and programming. I enjoy building clean, responsive, and user-friendly web interfaces using HTML, CSS, and JavaScript, while also exploring problem-solving with <span style="color:#2563eb;font-weight:600;">C</span>, <span style="color:#2563eb;font-weight:600;">Python</span>, and <span style="color:#2563eb;font-weight:600;">Java</span>.
+          <br><br>
+          My journey in tech started with curiosity, and I’ve been learning by building projects and improving my skills every day. I’m always excited to learn new technologies, write clean code, and collaborate with others to create impactful solutions.
+          <br><br>
+          Beyond coding, I love exploring emerging technologies and continuously growing as a developer.
+        </div>
+      </div>
+    </div>     
+    </div>
+  </section>
+
+  <section id="education">
+    <h2 style="font-size:2.2rem;font-weight:700;color:#222;margin-bottom:1.2rem;text-align:center;">Professional Experience</h2>
+    <div style="max-width:1100px;margin:2rem auto;background:linear-gradient(135deg,#e3eafc 0%,#f7fafd 100%);border-radius:24px;box-shadow:0 4px 24px rgba(0,0,0,0.06);padding:2.5rem 2.5rem 2rem 2.5rem;">
+      <div style="display:flex;align-items:center;gap:1.5rem;">
+        <div style="background:#fff;border-radius:16px;width:64px;height:64px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(37,99,235,0.07);font-size:2.5rem;">
+          <span style="color:#2563eb;">&#127891;</span>
+        </div>
+        <div>
+          <div style="font-size:2.1rem;font-weight:700;color:#222;">Bachelor of Technology in Computer Science and Information Technology</div>
+          <div style="margin-top:0.2rem;font-size:1.2rem;font-weight:500;color:#2563eb;">
+            <a href="https://www.kluniversity.in/" target="_blank" style="color:#2563eb;text-decoration:none;">@ KL University</a>
+          </div>
+          <div style="margin-top:0.5rem;display:flex;align-items:center;gap:1.5rem;font-size:1.1rem;color:#444;">
+            <span>&#128197; Jul 2025 – Present</span>
+            <span>&#128205; Hyderabad, Telangana</span>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:1.5rem;font-size:1.25rem;color:#333;">
+        CGPA: <b>9.77</b>. Relevant Coursework: Data Structures, Object-Oriented Programming, Algorithms, Database Management Systems. Participated in hackathons, implemented projects focused on web development.
+      </div>
+      <div style="margin-top:2rem;">
+        <div style="font-size:1.3rem;font-weight:700;color:#222;display:flex;align-items:center;gap:0.5rem;">
+          <span style="color:#2563eb;">&#128081;</span> Key Achievements
+        </div>
+        <ul style="margin-top:0.7rem;margin-left:1.5rem;font-size:1.1rem;color:#2563eb;">
+          <li style="margin-bottom:0.3rem;color:#2563eb;">CGPA: 9.77</li>
+        </ul>
+      </div>
+      <div style="margin-top:1.5rem;">
+        <div style="font-size:1.2rem;font-weight:700;color:#222;display:flex;align-items:center;gap:0.5rem;">
+          <span style="color:#2563eb;">&#127891;</span> Technologies & Skills
+        </div>
+        <div style="margin-top:0.7rem;display:flex;gap:1rem;flex-wrap:wrap;">
+          <span style="background:#fff;border-radius:8px;padding:0.5rem 1.2rem;font-size:1.1rem;font-weight:600;color:#2563eb;box-shadow:0 1px 4px rgba(37,99,235,0.07);">Data Structures</span>
+          <span style="background:#fff;border-radius:8px;padding:0.5rem 1.2rem;font-size:1.1rem;font-weight:600;color:#2563eb;box-shadow:0 1px 4px rgba(37,99,235,0.07);">OOP</span>
+          <span style="background:#fff;border-radius:8px;padding:0.5rem 1.2rem;font-size:1.1rem;font-weight:600;color:#2563eb;box-shadow:0 1px 4px rgba(37,99,235,0.07);">Algorithms</span>
+          <span style="background:#fff;border-radius:8px;padding:0.5rem 1.2rem;font-size:1.1rem;font-weight:600;color:#2563eb;box-shadow:0 1px 4px rgba(37,99,235,0.07);">DBMS</span>
+          <span style="background:#fff;border-radius:8px;padding:0.5rem 1.2rem;font-size:1.1rem;font-weight:600;color:#2563eb;box-shadow:0 1px 4px rgba(37,99,235,0.07);">Full-stack Development</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications" style="padding-top:40px;">
+    <h2 style="text-align:center;font-size:2.7rem;font-weight:700;margin-bottom:0.5rem;">Certifications</h2>
+    <p style="text-align:center;font-size:1.3rem;color:#444;margin-bottom:2.5rem;">Professional certifications that validate my expertise across various technologies and platforms.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:2rem;max-width:1200px;margin:0 auto;">
+      <!-- Linguaskill Cambridge English -->
+      <div style="background:#fff;border-radius:18px;box-shadow:0 4px 24px rgba(0,0,0,0.06);padding:2rem 2rem 1.5rem 2rem;display:flex;flex-direction:column;gap:0.7rem;">
+        <div style="display:flex;align-items:center;gap:1rem;">
+          <img src="https://international.missouristate.edu/ELI/_Files/Linguaskill_logo_png.png" alt="Cambridge English" style="width:48px;height:48px;object-fit:contain;">
+          <span style="font-size:1.45rem;font-weight:700;color:#222;">Linguaskill Cambridge English</span>
+        </div>
+        <div style="font-size:1.1rem;color:#444;">Cambridge Assessment English • Issued May 2024</div>
+        <div style="margin-top:0.5rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+          <span style="background:#e3eafc;color:#2563eb;font-weight:600;padding:0.3rem 1rem;border-radius:7px;font-size:1rem;">English Proficiency</span>
+          <span style="background:#e3eafc;color:#2563eb;font-weight:600;padding:0.3rem 1rem;border-radius:7px;font-size:1rem;">CEFR B2</span>
+        </div>
+      </div>
+      <!-- Cisco Networking Academy: C Essentials -->
+      <div style="background:#fff;border-radius:18px;box-shadow:0 4px 24px rgba(0,0,0,0.06);padding:2rem 2rem 1.5rem 2rem;display:flex;flex-direction:column;gap:0.7rem;">
+        <div style="display:flex;align-items:center;gap:1rem;">
+          <img src="https://tse2.mm.bing.net/th/id/OIP.C9tgcruNTFROeAaFN5FwmAHaHa?pid=Api&P=0&h=180" alt="Cisco Networking Academy" style="width:48px;height:48px;object-fit:contain;">
+          <span style="font-size:1.45rem;font-weight:700;color:#222;">Cisco Networking Academy: C Essentials</span>
+        </div>
+        <div style="font-size:1.1rem;color:#444;">Cisco • Issued Jun 2024</div>
+        <div style="margin-top:0.5rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+          <span style="background:#e3eafc;color:#2563eb;font-weight:600;padding:0.3rem 1rem;border-radius:7px;font-size:1rem;">C Programming</span>
+          <span style="background:#e3eafc;color:#2563eb;font-weight:600;padding:0.3rem 1rem;border-radius:7px;font-size:1rem;">Networking</span>
+          <span style="background:#e3eafc;color:#2563eb;font-weight:600;padding:0.3rem 1rem;border-radius:7px;font-size:1rem;">Cisco</span>
+        </div>
+      </div>
+      <!-- Microsoft Certified: Azure AI Fundamentals -->
+      <div style="background:#fff;border-radius:18px;box-shadow:0 4px 24px rgba(0,0,0,0.06);padding:2rem 2rem 1.5rem 2rem;display:flex;flex-direction:column;gap:0.7rem;">
+        <div style="display:flex;align-items:center;gap:1rem;">
+          <img src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg" alt="Azure AI Fundamentals" style="width:48px;height:48px;object-fit:contain;">
+          <span style="font-size:1.45rem;font-weight:700;color:#222;">Microsoft Certified: Azure AI Fundamentals</span>
+        </div>
+        <div style="font-size:1.1rem;color:#444;">Microsoft • Issued Aug 2025</div>
+        <div style="margin-top:0.5rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+          <span style="background:#e3eafc;color:#2563eb;font-weight:600;padding:0.3rem 1rem;border-radius:7px;font-size:1rem;">Azure</span>
+          <span style="background:#e3eafc;color:#2563eb;font-weight:600;padding:0.3rem 1rem;border-radius:7px;font-size:1rem;">AI Fundamentals</span>
+          <span style="background:#e3eafc;color:#2563eb;font-weight:600;padding:0.3rem 1rem;border-radius:7px;font-size:1rem;">Cloud</span>
+        </div>
+      </div>
+      <!-- Google AI Essentials -->
+      <div style="background:#fff;border-radius:18px;box-shadow:0 4px 24px rgba(0,0,0,0.06);padding:2rem 2rem 1.5rem 2rem;display:flex;flex-direction:column;gap:0.7rem;">
+        <div style="display:flex;align-items:center;gap:1rem;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google AI Essentials" style="width:48px;height:48px;object-fit:contain;">
+          <span style="font-size:1.45rem;font-weight:700;color:#222;">Google AI Essentials</span>
+        </div>
+        <div style="font-size:1.1rem;color:#444;">Google • Issued Sep 2025</div>
+        <div style="margin-top:0.5rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+          <span style="background:#e3eafc;color:#2563eb;font-weight:600;padding:0.3rem 1rem;border-radius:7px;font-size:1rem;">AI</span>
+          <span style="background:#e3eafc;color:#2563eb;font-weight:600;padding:0.3rem 1rem;border-radius:7px;font-size:1rem;">Google</span>
+          <span style="background:#e3eafc;color:#2563eb;font-weight:600;padding:0.3rem 1rem;border-radius:7px;font-size:1rem;">Essentials</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills & Expertise</h2>
+    <div class="skills">
+      <div class="card">Languages: C, Java, JavaScript</div>
+      <div class="card">Web Development: React, Node, HTML, CSS</div>
+      <div class="card">Database: MySQL, MongoDB</div>
+      <div class="card">Cloud: AWS, Azure</div>
+      <div class="card">DevOps: Docker, GitHub Actions</div>
+      <div class="card">Soft Skills: Teamwork, Leadership</div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-top:40px;">
+    <h2 style="text-align:center;font-size:2.7rem;font-weight:700;margin-bottom:0.5rem;">Let's Connect</h2>
+    <p style="text-align:center;font-size:1.3rem;color:#444;margin-bottom:2.5rem;max-width:700px;margin-left:auto;margin-right:auto;">I'm always open to discussing new opportunities and exciting projects.</p>
+    <div style="background:#fff;border-radius:18px;box-shadow:0 4px 24px rgba(0,0,0,0.06);padding:3.5rem 2.5rem 3rem 2.5rem;min-width:340px;max-width:700px;width:100%;margin:0 auto;display:flex;flex-direction:column;align-items:center;">
+      <div style="background:#e3eafc;border-radius:50%;width:60px;height:60px;display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;">
+        <span style="font-size:2.2rem;color:#2563eb;">&#128172;</span>
+      </div>
+      <div style="font-size:1.35rem;font-weight:700;margin-bottom:0.5rem;">Get In Touch</div>
+      <div style="color:#444;font-size:1.05rem;margin-bottom:1.5rem;text-align:center;">I'm always open to discussing new opportunities and exciting projects.</div>
+      <div style="width:100%;margin-bottom:1.1rem;background:#f7fafd;border-radius:10px;padding:1rem 1.2rem;display:flex;align-items:center;gap:0.8rem;">
+        <span style="color:#2563eb;font-size:1.3rem;">&#128205;</span>
+        <span>Hyderabad, Telangana</span>
+      </div>
+      <div style="width:100%;margin-bottom:1.1rem;background:#f7fafd;border-radius:10px;padding:1rem 1.2rem;display:flex;align-items:center;gap:0.8rem;">
+        <span style="color:#2563eb;font-size:1.3rem;">&#9993;</span>
+        <span><a href="mailto:2200300837cseh@gmail.com" style="color:#2563eb;text-decoration:none;">botlalucky24@gmail.com</a></span>
+      </div>
+      <div style="width:100%;margin-bottom:1.1rem;background:#f7fafd;border-radius:10px;padding:1rem 1.2rem;display:flex;align-items:center;gap:0.8rem;">
+        <span style="color:#2563eb;font-size:1.3rem;">&#9200;</span>
+        <span>Response Time<br><span style="font-size:1rem;color:#444;">Within 24 hours</span></span>
+      </div>
+      <div style="margin-top:1.2rem;width:100%;display:flex;gap:1rem;justify-content:center;">
+        <a href="https://github.com/botlalucky24" target="_blank" style="background:#222;color:#fff;padding:0.7rem 1.3rem;border-radius:7px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:0.5rem;font-size:1.1rem;"><span style="font-size:1.2rem;">&#xf09b;</span> GitHub</a>
+        <a href="https://www.linkedin.com/in/deepak-botla-36124631b/" target="_blank" style="background:#2563eb;color:#fff;padding:0.7rem 1.3rem;border-radius:7px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:0.5rem;font-size:1.1rem;"><span style="font-size:1.2rem;">&#xf0e1;</span> LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Scroll Animation
+    const sections = document.querySelectorAll("section");
+    window.addEventListener("scroll", () => {
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          sec.classList.add("visible");
+        }
+      });
+    });
+
+    // Typing animation for main heading (for dynamic effect after page load)
+    window.addEventListener('DOMContentLoaded', () => {
+      const el = document.getElementById('main-typing');
+      const text = "Hi, I'm ";
+      const nameSpan = document.createElement('span');
+      nameSpan.style.color = '#4da6ff';
+      nameSpan.textContent = 'Botla Deepak';
+      let i = 0;
+      el.innerHTML = '';
+      function type() {
+        if (i < text.length) {
+          el.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(type, 60);
+        } else {
+          el.appendChild(nameSpan);
+        }
+      }
+      type();
+    });
+  </script>
+
+  <!-- Page View Counter -->
+  <footer style="background: #0a0a0a url('https://www.transparenttextures.com/patterns/stardust.png'); color: #fff; padding: 3rem 0 1.5rem 0; margin-top: 3rem; border-top: 2px solid #2563eb; position: relative;">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:2.5rem 1.5rem;">
+      <div style="flex:1;min-width:220px;display:flex;flex-direction:column;align-items:center;">
+        <img src='Botla Deepak.png' alt='Logo' style='width:70px;height:70px;border-radius:50%;background:#fff;padding:6px;margin-bottom:0.7rem;box-shadow:0 2px 12px rgba(37,99,235,0.07);'>
+        <div style="font-size:1.25rem;font-weight:700;text-align:center;">Botla Deepak</div>
+      </div>
+      <div style="flex:2;min-width:200px;">
+        <div style="font-size:1.15rem;font-weight:700;margin-bottom:0.7rem;">Quick Links</div>
+        <ul style="list-style:none;padding:0;margin:0;line-height:2;">
+          <li><a href="#" style="color:#fff;text-decoration:none;">Home</a></li>
+          <li><a href="#certifications" style="color:#fff;text-decoration:none;">Certifications</a></li>
+          <li><a href="#skills" style="color:#fff;text-decoration:none;">Skills</a></li>
+          <li><a href="#contact" style="color:#fff;text-decoration:none;">Contact</a></li>
+        </ul>
+      </div>
+      <div style="flex:2;min-width:200px;">
+        <div style="font-size:1.15rem;font-weight:700;margin-bottom:0.7rem;">Follow Us</div>
+        <ul style="list-style:none;padding:0;margin:0;line-height:2;">
+          <li><a href="https://www.linkedin.com/in/deepak-botla-36124631b/" target="_blank" style="color:#fff;text-decoration:none;"><span style="font-size:1.2rem;vertical-align:middle;margin-right:0.4rem;">&#xf0e1;</span> LinkedIn</a></li>
+          <li><a href="https://github.com/botlalucky24" target="_blank" style="color:#fff;text-decoration:none;"><span style="font-size:1.2rem;vertical-align:middle;margin-right:0.4rem;">&#xf09b;</span> GitHub</a></li>
+        </ul>
+      </div>
+      <div style="flex:2;min-width:200px;">
+        <div style="font-size:1.15rem;font-weight:700;margin-bottom:0.7rem;">Website Developed By:</div>
+        <div style="color:#bdbdbd;font-size:1.05rem;">Botla Deepak</div>
+      </div>
+    </div>
+    <div style="margin:2.5rem auto 0 auto;max-width:1200px;border-top:1px solid #222;"></div>
+    <div style="text-align:center;margin-top:1.2rem;font-size:1.1rem;color:#bdbdbd;">
+      &copy; 2025 <span style="color:#2563eb;font-weight:600;">Botla Deepak</span>. All rights reserved.
+    </div>
+    <div id="view-counter" style="width:100%;text-align:center;margin:10px 0 0 0;font-size:1.1rem;color:#2563eb;font-weight:600;letter-spacing:0.5px;">
+      Viewers: <span id="viewCount">0</span>
+    </div>
+    <script>
+      // Simple persistent view counter using localStorage
+      const viewKey = 'myPageViewCount';
+      let count = localStorage.getItem(viewKey);
+      if (!count) {
+        count = 1;
+      } else {
+        count = parseInt(count) + 1;
+      }
+      localStorage.setItem(viewKey, count);
+      document.getElementById('viewCount').textContent = count;
+    </script>
+  </footer>
+</body>
+</html>
